@@ -9,18 +9,18 @@ namespace wallpaperChanger
     class Program
     {
 
-        public static int getRandomNumber(int lenght)
+        public static int getRandomIndex(int lenght)
         {
             var randomNumber = new Random();
             return randomNumber.Next(0, lenght-1);
         }
-        
+
         static void Main(string[] args)
         {
             var wallpaperDirectory = "/home/jig/Pictures/wallpapers/";
             
             var fileNames = Directory.GetFiles(wallpaperDirectory);
-            var indexOfWallpaper = getRandomNumber(fileNames.Length);
+            var indexOfWallpaper = getRandomIndex(fileNames.Length);
 
             Process fehStart = new Process();
             fehStart.StartInfo.FileName = "feh";
