@@ -1,0 +1,8 @@
+/home/jig/scripts/wallpaperchanger/bin/Debug/netcoreapp1.1/wallpaperchanger.deps.json
+/home/jig/scripts/wallpaperchanger/bin/Debug/netcoreapp1.1/wallpaperchanger.runtimeconfig.json
+/home/jig/scripts/wallpaperchanger/bin/Debug/netcoreapp1.1/wallpaperchanger.runtimeconfig.dev.json
+/home/jig/scripts/wallpaperchanger/bin/Debug/netcoreapp1.1/wallpaperchanger.dll
+/home/jig/scripts/wallpaperchanger/bin/Debug/netcoreapp1.1/wallpaperchanger.pdb
+/home/jig/scripts/wallpaperchanger/obj/Debug/netcoreapp1.1/wallpaperchanger.AssemblyInfo.cs
+/home/jig/scripts/wallpaperchanger/obj/Debug/netcoreapp1.1/wallpaperchanger.dll
+/home/jig/scripts/wallpaperchanger/obj/Debug/netcoreapp1.1/wallpaperchanger.pdb
