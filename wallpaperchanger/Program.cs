@@ -22,7 +22,7 @@ namespace wallpaperChanger
             var wallpaperDirectory = "/home/jig/Pictures/wallpapers/";
             var fileNames = Directory.GetFiles(wallpaperDirectory);
             var indexOfWallpaper = getRandomIndex(fileNames.Length);
-            Process fehStart = new Process();
+            var fehStart = new Process();
             fehStart.StartInfo.FileName = "feh";
             while (true)
             {
