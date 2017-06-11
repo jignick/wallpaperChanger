@@ -2,6 +2,8 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
+
 
 namespace wallpaperChanger
 {
@@ -18,25 +20,26 @@ namespace wallpaperChanger
         static void Main(string[] args)
         {
             var wallpaperDirectory = "/home/jig/Pictures/wallpapers/";
-            
             var fileNames = Directory.GetFiles(wallpaperDirectory);
             var indexOfWallpaper = getRandomIndex(fileNames.Length);
-
             Process fehStart = new Process();
             fehStart.StartInfo.FileName = "feh";
-
-            if (fileNames[indexOfWallpaper] != (wallpaperDirectory+"blondebitch.jpg") 
-                && fileNames[indexOfWallpaper] != (wallpaperDirectory+"15.jpg"))
+            while (true)
             {
-                fehStart.StartInfo.Arguments = "--bg-scale "+fileNames[indexOfWallpaper];
-                fehStart.Start();
+                if (fileNames[indexOfWallpaper] != (wallpaperDirectory+"blondebitch.jpg") 
+                    && fileNames[indexOfWallpaper] != (wallpaperDirectory+"15.jpg"))
+                {
+                    fehStart.StartInfo.Arguments = "--bg-scale "+fileNames[indexOfWallpaper];
+                    fehStart.Start();
+                }
+                else
+                {
+                    fehStart.StartInfo.Arguments = "--bg-center "+fileNames[indexOfWallpaper];
+                    fehStart.Start();
+                }
+                indexOfWallpaper = getRandomIndex(fileNames.Length);
+                Thread.Sleep(new TimeSpan(0,10,0));
             }
-            else
-            {
-                fehStart.StartInfo.Arguments = "--bg-center "+fileNames[indexOfWallpaper];
-                fehStart.Start();
-            }
-         
 
         }
     }
