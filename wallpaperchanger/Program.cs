@@ -19,10 +19,10 @@ namespace wallpaperChanger
 
             if (fileNames[indexOfWallpaper] != (wallpaperDirectory+"blondebitch.jpg") 
                 && fileNames[indexOfWallpaper] != (wallpaperDirectory+"15.jpg"))
-        {
+            {
                 fehStart.StartInfo.Arguments = "--bg-scale "+fileNames[indexOfWallpaper];
                 fehStart.Start();
-        }
+            }
             else
             {
                 fehStart.StartInfo.Arguments = "--bg-center "+fileNames[indexOfWallpaper];
