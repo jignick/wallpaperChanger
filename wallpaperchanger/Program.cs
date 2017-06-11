@@ -5,14 +5,22 @@ using System.Diagnostics;
 
 namespace wallpaperChanger
 {
+
     class Program
     {
+
+        public static int getRandomNumber(int lenght)
+        {
+            var randomNumber = new Random();
+            return randomNumber.Next(0, lenght-1);
+        }
+        
         static void Main(string[] args)
         {
             var wallpaperDirectory = "/home/jig/Pictures/wallpapers/";
-            var randomWallpaper = new Random();
+            
             var fileNames = Directory.GetFiles(wallpaperDirectory);
-            var indexOfWallpaper = randomWallpaper.Next(0, fileNames.Length-1);
+            var indexOfWallpaper = getRandomNumber(fileNames.Length);
 
             Process fehStart = new Process();
             fehStart.StartInfo.FileName = "feh";
